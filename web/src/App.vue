@@ -1,0 +1,115 @@
+<template>
+  <div class="app-container">
+    <canvas id="bg-canvas"></canvas>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let width, height;
+
+  function resize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+  }
+  window.onresize = resize;
+  resize();
+
+  const agents = [];
+  const orbits = [];
+
+  for(let i = 0; i < 15; i++) {
+    agents.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.8,
+      vy: (Math.random() - 0.5) * 0.8,
+      angle: Math.random() * Math.PI * 2,
+      spin: Math.random() * 0.02,
+      size: 2 + Math.random() * 3
+    });
+  }
+
+  for(let i = 0; i < 4; i++) {
+    orbits.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: 100 + Math.random() * 400,
+      speed: 0.0001 + Math.random() * 0.0005,
+      offset: Math.random() * Math.PI * 2
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+    orbits.forEach(o => {
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, o.radius, 0, Math.PI * 2);
+      ctx.stroke();
+    });
+
+    ctx.strokeStyle = 'rgba(0, 255, 0, 0.08)';
+    for(let i = 0; i < agents.length; i++) {
+      for(let j = i + 1; j < agents.length; j++) {
+        const dx = agents[i].x - agents[j].x;
+        const dy = agents[i].y - agents[j].y;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if(dist < 300) {
+          ctx.beginPath();
+          ctx.moveTo(agents[i].x, agents[i].y);
+          ctx.lineTo(agents[j].x, agents[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    agents.forEach(a => {
+      a.x += a.vx;
+      a.y += a.vy;
+      a.angle += a.spin;
+      if(a.x < 0 || a.x > width) a.vx *= -1;
+      if(a.y < 0 || a.y > height) a.vy *= -1;
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.beginPath();
+      ctx.arc(a.x, a.y, a.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.2)';
+      ctx.setLineDash([5, 10]);
+      ctx.beginPath();
+      ctx.arc(a.x, a.y, a.size + 15, a.angle, a.angle + Math.PI * 1.5);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+});
+</script>
+
+<style>
+@import './style.css';
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at center, #1A0033 0%, #0D001A 100%);
+}
+.app-container {
+  min-height: 100vh;
+  position: relative;
+}
+</style>
