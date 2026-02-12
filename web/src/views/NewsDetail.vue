@@ -48,7 +48,7 @@ const posts = {
     content: `
       <p>In a move that sounds like a plot from a satirical sci-fi movie, US customs officials in El Paso recently deployed a high-powered anti-drone laser from the DoD. The target? What they claimed was a "Mexican cartel drone breaching airspace."</p>
       <h3>The Truth</h3>
-      <p>It turned out to be a party balloon. The laser was fired without FAA coordination, leading to a sudden and chaotic closure of El Paso airspace.</p>
+      <p>Turned out to be a party balloon. The laser was fired without FAA coordination, leading to a sudden and chaotic closure of El Paso airspace.</p>
       <p><strong>The Signal:</strong> This highlights the dangerous gap between "cool tech" and "responsible deployment." As autonomous defense systems become more common, the risk of "automated stupidity" scales with the hardware power.</p>
     `
   },
@@ -71,7 +71,7 @@ const post = computed(() => posts[route.params.slug]);
 
 <style scoped>
 .news-detail-view {
-  padding: 2rem 1rem;
+  padding: 1.5rem 0.5rem;
   min-height: 100vh;
 }
 .news-container {
@@ -79,8 +79,8 @@ const post = computed(() => posts[route.params.slug]);
   max-width: 800px;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.95);
-  padding: 1.5rem 1rem;
-  border: 4px solid var(--white);
+  padding: 1.2rem 1rem;
+  border: 3px solid var(--white);
   box-shadow: 10px 10px 0px var(--purple);
   box-sizing: border-box;
 }
@@ -89,57 +89,54 @@ const post = computed(() => posts[route.params.slug]);
   color: var(--lime);
   text-decoration: none;
   display: block;
-  margin-bottom: 2rem;
-  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
 }
 .post-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
 }
 .post-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(1.8rem, 10vw, 3.5rem);
-  line-height: 1;
-  margin: 1rem 0;
+  font-size: clamp(1.6rem, 8vw, 3.5rem); /* Reduced further for extreme mobile */
+  line-height: 1.1;
+  margin: 0.5rem 0;
   text-transform: uppercase;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
 }
 .post-meta {
   font-family: 'Bungee', cursive;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--pink);
   line-height: 1.4;
 }
 .post-body {
-  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   line-height: 1.5;
   font-weight: 300;
 }
 .post-body :deep(h3) {
   font-family: 'Bungee', cursive;
-  margin: 2rem 0 1rem 0;
+  margin: 1.5rem 0 0.8rem 0;
   color: var(--yellow);
-  font-size: clamp(1.2rem, 5vw, 1.8rem);
+  font-size: 1.2rem;
 }
 .post-body :deep(p) {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 .post-body :deep(strong) {
   color: var(--lime);
   background: rgba(0, 255, 0, 0.1);
-  padding: 0 0.3rem;
 }
 
-@media (max-width: 600px) {
-  .news-detail-view {
-    padding: 1.5rem 0.5rem;
-  }
-  .news-container {
-    padding: 1.2rem 0.8rem;
-    border-width: 3px;
-  }
+@media (min-width: 768px) {
+  .news-detail-view { padding: 4rem 2rem; }
+  .news-container { padding: 3rem; border-width: 4px; box-shadow: 20px 20px 0px var(--purple); }
+  .post-title { font-size: 4rem; line-height: 0.9; }
+  .post-body { font-size: 1.4rem; line-height: 1.6; }
+  .post-body :deep(h3) { font-size: 1.8rem; }
 }
 </style>
