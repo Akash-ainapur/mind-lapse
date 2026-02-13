@@ -1,5 +1,25 @@
 [
   {
+    "slug": "founders-stack-2026",
+    "title": "The Founder’s Stack",
+    "tag": "GEAR",
+    "readTime": "4 MIN READ",
+    "excerpt": "Building a startup website in 2026 takes 3 hours, not weeks. Meet the new AI-native toolkit.",
+    "likes": 310,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>Building a startup website in 2026 doesn't take weeks anymore—it takes 3 hours. The new \"Founder’s Stack\" has dropped: Relume for structure, Framer for the build, and Google AI App Builder for custom assets.</p><h3>The 3-Hour Build</h3><p>By utilizing AI-driven wireframing and instant asset generation, founders are shifting from \"designing\" to \"curating.\" The goal is to get a professional, high-vibe presence live before the sun sets.</p><p><strong>The Signal:</strong> <strong>Speed is the only moat.</strong> In the AI era, an idea is worth zero; execution speed is everything. If you aren't using AI-native design tools to prototype and launch in a single afternoon, you’re already behind the curve. The barrier to entry for \"The 3D World\" (tangible startups) has officially collapsed.</p>"
+  },
+  {
+    "slug": "rlm-breakthrough",
+    "title": "The RLM Breakthrough?",
+    "tag": "AI",
+    "readTime": "3 MIN READ",
+    "excerpt": "A new method lets models learn from their own mistakes. High-signal reasoning is coming to local devices.",
+    "likes": 560,
+    "image": "https://images.unsplash.com/photo-1555255707-c07966488bc0?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>A new architecture called RLM (Representation Learning from Mistakes) is quietly making waves. It’s a method that lets models learn specifically from their errors, potentially bringing massive reasoning power to smaller, local AI agents.</p><h3>Self-Correction is the Key</h3><p>Instead of just predicting the next token, RLM focuses on identifying where it went wrong in previous attempts. This feedback loop allows smaller models to punch way above their weight class in complex logic tasks.</p><p><strong>The Signal:</strong> <strong>Efficiency > Scale.</strong> The \"bigger is better\" era is hitting a wall. The next wave of AI isn't about adding billions of parameters; it's about smarter <strong>self-correction loops</strong>. This is the key to getting high-signal intelligence running directly on your phone or local device without relying on massive cloud costs.</p>"
+  },
+  {
     "slug": "awareness-glitch",
     "title": "The Awareness Glitch?",
     "tag": "AI",
