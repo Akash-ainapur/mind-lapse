@@ -27,9 +27,9 @@
       
       <div class="hero-right">
         <div class="signal-stream">
-          <div class="stream-header">LIVE SIGNAL PULSE</div>
+          <div class="stream-header">THE PULSE</div>
           <div class="pulse-items">
-            <div v-for="(s, i) in signals" :key="i" class="pulse-item">
+            <div v-for="(s, i) in pulses" :key="i" class="pulse-item">
               <div class="pulse-meta">{{ s.tag }}</div>
               <div class="pulse-text">{{ s.text }}</div>
             </div>
@@ -39,39 +39,20 @@
     </section>
 
     <section class="feed">
-      <h2 class="section-title">LATEST DROPS</h2>
+      <h2 class="section-title">ZERO-ROT FEED</h2>
       <div class="news-grid">
-        <router-link to="/feed" class="news-card-link">
-          <div class="news-card">
-            <div class="card-tag">AI</div>
-            <h3>White Collar RIP?</h3>
-            <p>Microsoft AI CEO says AI will automate project managers and accountants in 18 months.</p>
+        <router-link 
+          v-for="post in news" 
+          :key="post.slug" 
+          :to="'/feed?slug=' + post.slug" 
+          class="news-card-link"
+        >
+          <div class="news-card" :class="{ alt: post.tag === 'TECH' }">
+            <div class="card-tag">{{ post.tag }}</div>
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt }}</p>
             <div class="card-footer">
-              <span>2 MIN READ</span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </router-link>
-
-        <router-link to="/feed" class="news-card-link">
-          <div class="news-card alt">
-            <div class="card-tag">TECH</div>
-            <h3>Balloon-Gate</h3>
-            <p>US officials fired an anti-drone laser at... a party balloon. Absurd tech news.</p>
-            <div class="card-footer">
-              <span>3 MIN READ</span>
-              <span class="arrow">→</span>
-            </div>
-          </div>
-        </router-link>
-
-        <router-link to="/feed" class="news-card-link">
-          <div class="news-card">
-            <div class="card-tag">GEAR</div>
-            <h3>The Subscription Trap</h3>
-            <p>HP is now renting out gaming laptops for $129/mo with zero option to own.</p>
-            <div class="card-footer">
-              <span>4 MIN READ</span>
+              <span>{{ post.readTime }}</span>
               <span class="arrow">→</span>
             </div>
           </div>
@@ -82,9 +63,11 @@
 </template>
 
 <script setup>
-const signals = [
+import news from '../data/news.json';
+
+const pulses = [
   { tag: 'BREAKING', text: 'OpenAI Sora access rolling out to creators next week.' },
-  { tag: 'TRENDING', text: 'The "Apple Glass" hype cycle begins again.' },
+  { tag: 'TRENDING', text: 'The \"Apple Glass\" hype cycle begins again.' },
   { tag: 'TECH', text: 'Nvidia hits new ATH as H200 chips ship.' }
 ];
 </script>

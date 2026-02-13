@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "white-collar-rip",
+    "title": "White Collar RIP?",
+    "tag": "AI",
+    "readTime": "2 MIN READ",
+    "excerpt": "Microsoft AI CEO says most white-collar tasks will be automated in 18 months. Are you ready?",
+    "likes": 1240,
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>Microsoft AI CEO Mustafa Suleyman recently dropped a bombshell that's echoing through college campuses worldwide. According to Suleyman, the next 18 months will see AI move beyond simple chat and into the full automation of core white-collar tasks.</p><h3>The \"Middle Management\" Wipeout</h3><p>Tasks usually handled by project managers, accountants, lawyers, and marketing associates are first in line. We're talking about a shift from \"AI as a tool\" to \"AI as a colleague.\"</p><p><strong>The Signal:</strong> Gen Z professionals need to pivot from \"doing the task\" to \"orchestrating the agent.\" If you aren't learning how to prompt and manage AI workflows today, you're becoming obsolete in real-time.</p>"
+  },
+  {
+    "slug": "balloon-gate",
+    "title": "Balloon-Gate",
+    "tag": "TECH",
+    "readTime": "3 MIN READ",
+    "excerpt": "US officials fired a laser at a party balloon. The gap between tech and responsibility is growing.",
+    "likes": 850,
+    "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>In a move that sounds like a plot from a satirical sci-fi movie, US customs officials in El Paso recently deployed a high-powered anti-drone laser from the DoD. The target? What they claimed was a \"Mexican cartel drone breaching airspace.\"</p><h3>The Truth</h3><p>It turned out to be a party balloon. The laser was fired without FAA coordination, leading to a sudden and chaotic closure of El Paso airspace.</p><p><strong>The Signal:</strong> This highlights the dangerous gap between \"cool tech\" and \"responsible deployment.\" As autonomous defense systems become more common, the risk of \"automated stupidity\" scales with the hardware power.</p>"
+  },
+  {
+    "slug": "subscription-trap",
+    "title": "The Subscription Trap",
+    "tag": "GEAR",
+    "readTime": "4 MIN READ",
+    "excerpt": "HP starts renting gaming laptops. You own nothing and you will be \"happy\". Red alert.",
+    "likes": 2100,
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>HP has officially entered the \"Rent-to-Rent\" era. Their new subscription service for Victus and Omen gaming laptops starts at $50/mo and goes up to $129/mo. The catch? You never, ever get to own the laptop.</p><h3>The Trade-off</h3><p>HP promises a new upgrade every year, but you're effectively paying a permanent tax on your gaming hobby. For Gen Z, who already struggles with the \"rental economy,\" this is a massive red flag.</p><h3>The Signal</h3><p>Ownership is becoming a luxury. The move toward hardware-as-a-service (HaaS) is designed to create infinite revenue for corporations while stripping users of their assets.</p>"
+  }
+]

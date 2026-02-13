@@ -26,52 +26,15 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
+import news from '../data/news.json';
 
 const route = useRoute();
-
-const posts = {
-  'white-collar-rip': {
-    title: 'White Collar RIP?',
-    tag: 'AI',
-    readTime: '2 MIN READ',
-    content: `
-      <p>Microsoft AI CEO Mustafa Suleyman recently dropped a bombshell that's echoing through college campuses worldwide. According to Suleyman, the next 18 months will see AI move beyond simple chat and into the full automation of core white-collar tasks.</p>
-      <h3>The "Middle Management" Wipeout</h3>
-      <p>Tasks usually handled by project managers, accountants, lawyers, and marketing associates are first in line. We're talking about a shift from "AI as a tool" to "AI as a colleague."</p>
-      <p><strong>The Signal:</strong> Gen Z professionals need to pivot from "doing the task" to "orchestrating the agent." If you aren't learning how to prompt and manage AI workflows today, you're becoming obsolete in real-time.</p>
-    `
-  },
-  'balloon-gate': {
-    title: 'Balloon-Gate: Lasers vs. Latex',
-    tag: 'TECH',
-    readTime: '3 MIN READ',
-    content: `
-      <p>In a move that sounds like a plot from a satirical sci-fi movie, US customs officials in El Paso recently deployed a high-powered anti-drone laser from the DoD. The target? What they claimed was a "Mexican cartel drone breaching airspace."</p>
-      <h3>The Truth</h3>
-      <p>Turned out to be a party balloon. The laser was fired without FAA coordination, leading to a sudden and chaotic closure of El Paso airspace.</p>
-      <p><strong>The Signal:</strong> This highlights the dangerous gap between "cool tech" and "responsible deployment." As autonomous defense systems become more common, the risk of "automated stupidity" scales with the hardware power.</p>
-    `
-  },
-  'subscription-trap': {
-    title: 'The Subscription Trap: You Own Nothing',
-    tag: 'GEAR',
-    readTime: '4 MIN READ',
-    content: `
-      <p>HP has officially entered the "Rent-to-Rent" era. Their new subscription service for Victus and Omen gaming laptops starts at $50/mo and goes up to $129/mo. The catch? You never, ever get to own the laptop.</p>
-      <h3>The Trade-off</h3>
-      <p>HP promises a new upgrade every year, but you're effectively paying a permanent tax on your gaming hobby. For Gen Z, who already struggles with the "rental economy," this is a massive red flag.</p>
-      <h3>The Signal</h3>
-      <p>Ownership is becoming a luxury. The move toward hardware-as-a-service (HaaS) is designed to create infinite revenue for corporations while stripping users of their assets.</p>
-    `
-  }
-};
-
-const post = computed(() => posts[route.params.slug]);
+const post = computed(() => news.find(p => p.slug === route.params.slug));
 </script>
 
 <style scoped>
 .news-detail-view {
-  padding: 1.5rem 0.5rem;
+  padding: 2rem 1rem;
   min-height: 100vh;
 }
 .news-container {
@@ -79,8 +42,8 @@ const post = computed(() => posts[route.params.slug]);
   max-width: 800px;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.95);
-  padding: 1.2rem 1rem;
-  border: 3px solid var(--white);
+  padding: 1.5rem 1rem;
+  border: 4px solid var(--white);
   box-shadow: 10px 10px 0px var(--purple);
   box-sizing: border-box;
 }
@@ -89,17 +52,17 @@ const post = computed(() => posts[route.params.slug]);
   color: var(--lime);
   text-decoration: none;
   display: block;
-  margin-bottom: 1.5rem;
-  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
 }
 .post-header {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 1.2rem;
+  padding-bottom: 1.5rem;
 }
 .post-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(1.6rem, 8vw, 3.5rem); /* Reduced further for extreme mobile */
+  font-size: clamp(1.6rem, 8vw, 3.5rem);
   line-height: 1.1;
   margin: 0.5rem 0;
   text-transform: uppercase;
