@@ -1,5 +1,8 @@
 <template>
   <div class="app-container">
+    <nav class="global-nav">
+      <router-link to="/" class="home-btn">HOME</router-link>
+    </nav>
     <canvas id="bg-canvas"></canvas>
     <router-view></router-view>
   </div>

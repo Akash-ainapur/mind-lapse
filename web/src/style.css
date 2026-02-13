@@ -21,6 +21,31 @@ body {
   overflow-x: hidden;
 }
 
+.global-nav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.home-btn {
+  font-family: 'Bungee', cursive;
+  font-size: 0.8rem;
+  background: var(--purple);
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  border: 2px solid var(--black);
+  text-decoration: none;
+  box-shadow: 4px 4px 0px var(--yellow);
+  transition: 0.1s;
+  display: inline-block;
+}
+
+.home-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--pink);
+}
+
 /* Hero Section Refined */
 .hero {
   display: grid;
@@ -127,6 +152,27 @@ body {
   transform: translate(-5px, -5px);
   box-shadow: 25px 25px 0px var(--pink);
   background: var(--yellow);
+}
+
+.cta-community {
+  font-family: 'Bungee', cursive;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background: var(--lime);
+  color: var(--black);
+  border: 5px solid var(--black);
+  box-shadow: 10px 10px 0px var(--white);
+  text-decoration: none;
+  width: fit-content;
+  transition: 0.2s;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.cta-community:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 14px 14px 0px var(--yellow);
+  background: var(--white);
 }
 
 .hero-nav {

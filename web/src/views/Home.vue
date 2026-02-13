@@ -17,6 +17,8 @@
             <span class="cta-text">FILTER THE NOISE ⚡</span>
           </router-link>
           
+          <a href="#" class="cta-community" target="_blank">JOIN THE COMMUNITY 💬</a>
+          
           <div class="hero-nav">
             <router-link to="/hype" class="nav-link">HYPE INDEX</router-link>
             <router-link to="/chat" class="nav-link">SIGNAL CHAT</router-link>
