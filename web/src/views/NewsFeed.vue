@@ -55,14 +55,19 @@ function toggleLike(slug) {
 }
 
 function sharePost(post) {
+  const shareText = `⚡ *MIND LAPSE SIGNAL* ⚡\n\n*${post.title}*\n\n${post.excerpt}\n\nRead the full Zero-Rot report here:`;
+  const shareUrl = `${window.location.origin}/news/${post.slug}`;
+
   if (navigator.share) {
     navigator.share({
-      title: post.title,
-      text: post.excerpt,
-      url: window.location.href,
+      title: `Mind Lapse: ${post.title}`,
+      text: shareText,
+      url: shareUrl,
     });
   } else {
-    alert('Link copied to clipboard!');
+    // Fallback for desktop: WhatsApp Web direct link
+    const waUrl = `https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`;
+    window.open(waUrl, '_blank');
   }
 }
 </script>
