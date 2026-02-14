@@ -1,5 +1,15 @@
 [
   {
+    "slug": "desktop-reckoning",
+    "title": "The Desktop Reckoning",
+    "tag": "AI",
+    "readTime": "3 MIN READ",
+    "excerpt": "Microsoft AI CEO warns: If you work on a computer, your job is in the danger zone. Entering the 'Agent Era'.",
+    "likes": 520,
+    "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1000",
+    "content": "<p>Microsoft AI CEO Mustafa Suleyman just issued a blunt warning: If you work on a computer, your job is officially in the danger zone. We are shifting from AI as a \"sidekick\" to AI as a full-scale replacement for digital desk work.</p><h3>Desk-Less Value</h3><p>If your primary value is tied to a keyboard and a screen, your moat is disappearing. The automation of digital tasks is accelerating beyond simple chat and into full agency.</p><p><strong>The Signal:</strong> Transition from a <strong>Producer</strong> (someone who performs tasks) to an <strong>Architect</strong> (someone who manages the AI agents performing those tasks). The \"Signal\" isn't about being better at your job; it's about owning the systems that automate it.</p>"
+  },
+  {
     "slug": "founders-stack-2026",
     "title": "The Founder’s Stack",
     "tag": "GEAR",
