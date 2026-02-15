@@ -1,5 +1,17 @@
 [
   {
+    "slug": "gemini-3-deep-think",
+    "title": "GEMINI’S DEEP THINK UPSET",
+    "tag": "AI",
+    "readTime": "3 MIN READ",
+    "excerpt": "Google's new Deep Think model reportedly outperforming flagship Pro in complex reasoning. Depth > Hype.",
+    "likes": 420,
+    "image": "https://images.unsplash.com/photo-1620712943543-bcc4638d9980?auto=format&fit=crop&q=80&w=1000",
+    "synopsis": "A new iteration of Google's Gemini 3 has emerged, and it's reportedly outperforming the flagship 'Pro' model in complex reasoning tasks. Known as Deep Think, this version is designed to prioritize logical depth over conversational speed, signaling a major win for targeted AI optimization.",
+    "source": "Instagram / 100xengineers",
+    "content": "<h3>The Reasoning Powerhouse</h3><p>Google's latest move in the AI arms race is 'Gemini 3 Deep Think.' Unlike standard models that aim for instant replies, Deep Think is architected for high-stakes problem solving and coding. It utilizes an internal reasoning chain that reportedly beats even the flagship Pro version in logical consistency and zero-shot accuracy.</p><h3>Efficiency Upset</h3><p>This signals a shift where power-users are moving away from \"Generalist\" models toward \"Reasoning\" models. Deep Think is proving that targeted architectural tweaks can beat sheer parameter scale, delivering better results with less compute bloat.</p><h3>The End of 'Pro' Dominance?</h3><p>If a 'Deep Think' variant can consistently outperform the 'Pro' model, the industry standard for what constitutes a flagship model is being redefined. It’s no longer about how many billions of parameters you have, but how deep the model can go before giving up on a complex task.</p><p><strong>The Signal:</strong> <strong>Depth > Hype.</strong> The 'Deep Think' era is proof that the next major breakthrough in AI won't be a \"larger\" model, but a \"deeper\" one. For Gen Z developers and researchers, the lesson is clear: Leverage models that can actually <strong>think</strong> through a problem, not just chat about it. Speed is for the mid-wit; depth is for the high-signal.</p>"
+  },
+  {
     "slug": "indian-banking-ai-hiring",
     "title": "BANKING ON AGENTS",
     "tag": "AI",
